@@ -1,0 +1,14 @@
+{
+  "name": "youtubebackend",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "arunava",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "start": "node ./script.js",
+    "chacha": "echo \" hii chacha\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
