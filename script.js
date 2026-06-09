@@ -47,7 +47,7 @@
 
    
 
-const fs= require('fs');
+// const fs= require('fs');
 
 // fs.appendFile('hey.txt', 'accha huu', function(err) {
 //       if(err) console.log(err);
@@ -78,12 +78,28 @@ const fs= require('fs');
 
 //HTTP module
 
-const http = require('http');
+// const http = require('http');
 
-const server = http.createServer(function(req, res) {
-      res.end("hello world");
+// const server = http.createServer(function(req, res) {
+//       res.end("hello world");
+// })
+
+// server.listen(3000, function() {
+//       console.log("server is running on port 3000");
+// }) 
+
+
+
+
+
+const express = require('express')
+
+const app = express()
+
+app.get('/', function(req, res) {
+  res.send('Hello World')
 })
 
-server.listen(3000, function() {
-      console.log("server is running on port 3000");
-}) 
+app.listen(3000, () => {
+  console.log('Server is running on http://localhost:3000')
+})
