@@ -97,13 +97,23 @@ const express = require('express')
 const app = express()
 
 app.use(function(req, res, next) {
-  console.log("middleware called");
+  console.log("middleware chala");
   next();
 })
+
+app.use(function(req, res, next) {
+  console.log("middleware chala ak aur bar");
+  next();
+})
+
 
 //routes create karna
 app.get('/', function(req, res) {
   res.send('Hellooooo brooooo')
+})
+
+app.get('/about', function(req, res) {
+  res.send('About page aya brooooo')
 })
 
 app.listen(3000, () => {
