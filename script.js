@@ -116,6 +116,15 @@ app.get('/about', function(req, res) {
   res.send('About page aya brooooo')
 })
 
+app.get('/profile', function(req, res, next) {
+  return next(new Error("error aagya brooooo"));
+})
+
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send('Something broke!, we dont have any idea');
+})
+
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');
 })
