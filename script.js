@@ -96,10 +96,16 @@ const express = require('express')
 
 const app = express()
 
+app.use(function(req, res, next) {
+  console.log("middleware called");
+  next();
+})
+
+//routes create karna
 app.get('/', function(req, res) {
-  res.send('Hello World')
+  res.send('Hellooooo brooooo')
 })
 
 app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000')
+  console.log('Server is running on http://localhost:3000');
 })
