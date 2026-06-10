@@ -3,7 +3,7 @@
 //     console.log(val + " hello");
 // })
 
-// var arr=[1,2,3,4];
+// var arr=[1,2,3,4]; 
 
 // var ans= arr.map(function(val) {
 //     return val * 2;   
